@@ -10,6 +10,7 @@
   "content_scripts": [
     {
       "matches": [
+        "https://chat.openai.com/",
         "https://chat.openai.com/chat",
         "https://chat.openai.com/chat/*"
       ],
@@ -17,7 +18,10 @@
       "run_at": "document_end"
     },
     {
-      "matches": ["https://chat.openai.com/auth/login", "https://auth0.openai.com/u/login/*"],
+      "matches": [
+        "https://chat.openai.com/auth/login",
+        "https://auth0.openai.com/u/login/*"
+      ],
       "js": ["src/login.js"],
       "run_at": "document_idle"
     }
